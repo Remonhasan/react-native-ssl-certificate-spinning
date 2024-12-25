@@ -11,17 +11,9 @@ Then click **Download Server Certificate**. You will get the downloaded certific
 
 ![Download SSL Certificate Key](https://github.com/Remonhasan/react-native-ssl-certificate-spinning/blob/main/ssl-certificate-spinning.png)
 
-```bash
-# using npm
-npm start
+## Step 2: Add Certificate in your application
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Go to Folder android -> app -> src -> main -> main. Make a folder inside `main` folder by name `assets`. The make a file by name `mycert.cer`. And copy your certificate key form the downloaded file and paste it into `mycert.cer` file. **Note: just copy full context and paste**
 
 ### For Android
 
