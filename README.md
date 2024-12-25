@@ -23,21 +23,61 @@ Go to Folder `android` -> `app` -> `src` -> `main`. Make a folder inside `main` 
 npm i react-native-ssl-pinning
 ```
 
-### For iOS
+## Step 3: Make POST Request
+```typescript
 
-```bash
-# using npm
-npm run ios
+import { fetch } from 'react-native-ssl-pinning'; // SSL Spinning Library
 
-# OR using Yarn
-yarn ios
+// POST request snippets
+  const handleLogin = async () => {
+    if (email.trim() === '' || password.trim() === '') {
+      Alert.alert('Error', 'Please fill in both fields.');
+      return;
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailRegex.test(email)) {
+      Alert.alert('Error', 'Please enter a valid email address.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    // your payload (passing parameters)
+    const payLoad = {
+      username: email,
+      password,
+    };
+
+    try {
+      // using fetch from ssl-spinning library
+      const response = await fetch('https://yourdomain.com/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payLoad),
+        sslPinning: {
+          certs: ['mycert'], // SSL certificate file
+        },
+      });
+
+      const data = await response.json();
+      if (data.code == 200) { // check your json response
+        setIsLoading(false);
+        navigation.navigate('Dashboard');
+      } else {
+        setIsLoading(false);
+        Alert.alert('Error', 'Invalid Credentials.' || 'Login failed.');
+      }
+    } catch (error) {
+      setIsLoading(false);
+      console.log("login error:", error)
+      Alert.alert('Error', 'Certification Expired.');
+    }
+  };
+
 ```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
 
 Now that you have successfully run the app, let's modify it.
 
