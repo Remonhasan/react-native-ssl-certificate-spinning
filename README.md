@@ -4,9 +4,9 @@ This repository belongs how you can add ssl certification spinning into your rea
 >**Note**: A React Native library for managing SSL certificate pinning and handling secure network requests. This ensures enhanced security by preventing man-in-the-middle (MITM) attacks. 
 React Native app needs SSL Spinning for access the api/server which are having SSL certification. 
 
-## Step 1: Start the Metro Server
+## Step 1: Get your SSL Certification Key
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+First, you will need to go [SSL Labs SSL Test](https://www.ssllabs.com/ssltest/') for getting your **ssl certification** key. Enter your domain in search and you will get a page like the below snippet.
 
 To start Metro, run the following command from the _root_ of your React Native project:
 
