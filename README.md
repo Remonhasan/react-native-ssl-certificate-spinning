@@ -23,7 +23,7 @@ Go to Folder `android` -> `app` -> `src` -> `main`. Make a folder inside `main` 
 npm i react-native-ssl-pinning
 ```
 
-## Step 3: Make POST Request
+## Step 3: Make `POST` Request
 ```typescript
 
 import { fetch } from 'react-native-ssl-pinning'; // SSL Spinning Library
@@ -78,17 +78,38 @@ import { fetch } from 'react-native-ssl-pinning'; // SSL Spinning Library
   };
 
 ```
+## Make `GET` Request
 
-Now that you have successfully run the app, let's modify it.
+```typescript
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+// GET request snippets
+  const fetchShows = async () => {
+    if (startDate > endDate) {
+      setDateError('Start date must be less than or equal to end date.');
+      return;
+    }
+    setDateError('');
+    setLoading(true);
+    try {
+      const apiUrl = "https://yourdomain.com/";
+      const response = await fetch(apiUrl, {
+        method: 'GET',
+        sslPinning: {
+          certs: ['mycert'], // SSL certificate file
+        },
+      });
+      const json = await response.json();
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+      setData(json?.data?.result);
+    } catch (error) {
+      console.error(error);
+      setError('Error fetching data.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
+```
 
 ### Now what?
 
