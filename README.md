@@ -23,7 +23,7 @@ Go to Folder `android` -> `app` -> `src` -> `main`. Make a folder inside `main` 
 npm i react-native-ssl-pinning
 ```
 
-## Step 3: Make `POST` Request
+## Request Snippet: Make `POST` Request
 ```typescript
 
 import { fetch } from 'react-native-ssl-pinning'; // SSL Spinning Library
@@ -78,7 +78,7 @@ import { fetch } from 'react-native-ssl-pinning'; // SSL Spinning Library
   };
 
 ```
-## Make `GET` Request
+## Request Snippet: Make `GET` Request
 
 ```typescript
 
