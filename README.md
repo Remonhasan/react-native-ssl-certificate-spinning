@@ -14,6 +14,7 @@ Then click **Download Server Certificate**. You will get the downloaded certific
 ## Step 2: Add Certificate in your application
 
 Go to Folder `android` -> `app` -> `src` -> `main`. Make a folder inside `main` folder by name `assets`. The make a file by name `mycert.cer`. And copy your certificate key form the downloaded file and paste it into `mycert.cer` file. **Note: just copy full context and paste** .
+
 ![Folder Structure](https://github.com/Remonhasan/react-native-ssl-certificate-spinning/blob/main/certification-folder.png)
 
 ### For Android
