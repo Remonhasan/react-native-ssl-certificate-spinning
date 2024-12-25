@@ -1,8 +1,8 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
+This repository belongs how you can add ssl certification spinning into your react native android / ios app.
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+>**Note**: A React Native library for managing SSL certificate pinning and handling secure network requests. This ensures enhanced security by preventing man-in-the-middle (MITM) attacks. 
+React Native app needs SSL Spinning for access the api/server which are having SSL certification. 
 
 ## Step 1: Start the Metro Server
 
