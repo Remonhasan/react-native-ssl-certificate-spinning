@@ -8,7 +8,7 @@ React Native app needs SSL Spinning for access the api/server which are having S
 
 First, you will need to go [SSL Labs SSL Test](https://www.ssllabs.com/ssltest/') for getting your **ssl certification** key. Enter your domain in search and you will get a page like the below snippet.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+![Download SSL Certificate Key](https://github.com/Remonhasan/react-native-ssl-certificate-spinning/blob/main/ssl-certificate-spinning.png)
 
 ```bash
 # using npm
