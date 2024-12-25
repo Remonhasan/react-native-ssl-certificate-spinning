@@ -17,14 +17,10 @@ Go to Folder `android` -> `app` -> `src` -> `main`. Make a folder inside `main` 
 
 ![Folder Structure](https://github.com/Remonhasan/react-native-ssl-certificate-spinning/blob/main/certification-folder.png)
 
-### For Android
+### Install ssl spinning library 
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm i react-native-ssl-pinning
 ```
 
 ### For iOS
