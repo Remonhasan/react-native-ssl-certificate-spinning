@@ -7,6 +7,7 @@ React Native app needs SSL Spinning for access the api/server which are having S
 ## Step 1: Get your SSL Certification Key
 
 First, you will need to go [SSL Labs SSL Test](https://www.ssllabs.com/ssltest/') for getting your **ssl certification** key. Enter your domain in search and you will get a page like the below snippet.
+Then click **Download Server Certificate**.
 
 ![Download SSL Certificate Key](https://github.com/Remonhasan/react-native-ssl-certificate-spinning/blob/main/ssl-certificate-spinning.png)
 
